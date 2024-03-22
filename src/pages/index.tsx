@@ -19,7 +19,11 @@ export default function Home() {
         scale={4}
       >
         <Container size="1800px">
-          <Stack>
+          <Stack
+            style={{
+              overflow: 'hidden',
+            }}
+          >
             <LandingHero />
 
             {/* <LandingPiano /> */}

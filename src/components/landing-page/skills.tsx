@@ -1,11 +1,4 @@
-import {
-  Center,
-  Divider,
-  Stack,
-  Text,
-  Title,
-  rem,
-} from '@mantine/core';
+import { Center, Divider, Stack, Text, Title, rem } from '@mantine/core';
 
 import { Children } from 'react';
 import { useMediaQuery } from '@mantine/hooks';
@@ -25,13 +18,13 @@ const TechStack = [
 ];
 
 export const LandingSkills = () => {
-  const BigMd = useMediaQuery(`(min-width: ${BREAKPOINTS.MD})`);
+  const BigSm = useMediaQuery(`(min-width: ${BREAKPOINTS.SM})`);
 
   return (
     <>
       <Center mih="100vh">
         <Stack>
-          <Title size={rem(BigMd ? 200 : 140)} lh={1} c={PRIMARY_COLOR_MANTINE}>
+          <Title size={rem(BigSm ? 200 : 130)} lh={1} c={PRIMARY_COLOR_MANTINE}>
             Skills
           </Title>
         </Stack>

@@ -8,13 +8,13 @@ import { FadeUpAni } from '../animation/fade-up';
 const Interests = ['Startups', 'Listening Piano', 'Sky', 'Nature'];
 
 export const LandingInterest = () => {
-  const BigMd = useMediaQuery(`(min-width: ${BREAKPOINTS.MD})`);
+  const BigSm = useMediaQuery(`(min-width: ${BREAKPOINTS.SM})`);
 
   return (
     <>
       <Center mih="100vh">
         <Stack>
-          <Title size={rem(BigMd ? 200 : 140)} lh={1} c={PRIMARY_COLOR_MANTINE}>
+          <Title size={rem(BigSm ? 200 : 100)} lh={1} c={PRIMARY_COLOR_MANTINE}>
             Interest
           </Title>
 

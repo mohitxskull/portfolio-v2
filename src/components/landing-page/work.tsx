@@ -1,4 +1,4 @@
-import { ICON_SIZE, PRIMARY_COLOR_MANTINE } from '@/lib/const';
+import { BREAKPOINTS, ICON_SIZE, PRIMARY_COLOR_MANTINE } from '@/lib/const';
 import {
   ActionIcon,
   Center,
@@ -15,6 +15,7 @@ import { IconArrowUpRight } from '@tabler/icons-react';
 import { Children } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { useMediaQuery } from '@mantine/hooks';
 import { FadeUpAni } from '../animation/fade-up';
 import { GrowRightAni } from '../animation/grow-right';
 
@@ -108,33 +109,37 @@ const WorkCard = (props: {
   </FadeUpAni>
 );
 
-export const LandingWork = () => (
-  <>
-    <Center h="100vh">
-      <Stack>
-        <Title size={rem(150)} lh={0} c={PRIMARY_COLOR_MANTINE}>
-          Work
-        </Title>
-        <GrowRightAni>
-          <Divider size="xl" color="black" />
-        </GrowRightAni>
-        <GrowRightAni delay={0.2}>
-          <Divider size="xl" color="black" />
-        </GrowRightAni>
-      </Stack>
-    </Center>
-    <SimpleGrid mih="100vh" cols={{ base: 1, md: 2 }}>
-      {Children.toArray(
-        Work.map((work, workIndex) => (
-          <WorkCard
-            title={work.title}
-            description={work.description}
-            link={work.link}
-            category={work.category}
-            index={workIndex}
-          />
-        ))
-      )}
-    </SimpleGrid>
-  </>
-);
+export const LandingWork = () => {
+  const BigSm = useMediaQuery(`(min-width: ${BREAKPOINTS.SM})`);
+
+  return (
+    <>
+      <Center h="100vh">
+        <Stack>
+          <Title size={rem(BigSm ? 200 : 130)} lh={0} c={PRIMARY_COLOR_MANTINE}>
+            Work
+          </Title>
+          <GrowRightAni>
+            <Divider size="xl" color="black" />
+          </GrowRightAni>
+          <GrowRightAni delay={0.2}>
+            <Divider size="xl" color="black" />
+          </GrowRightAni>
+        </Stack>
+      </Center>
+      <SimpleGrid mih="100vh" cols={{ base: 1, md: 2 }}>
+        {Children.toArray(
+          Work.map((work, workIndex) => (
+            <WorkCard
+              title={work.title}
+              description={work.description}
+              link={work.link}
+              category={work.category}
+              index={workIndex}
+            />
+          ))
+        )}
+      </SimpleGrid>
+    </>
+  );
+};

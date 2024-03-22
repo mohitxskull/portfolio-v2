@@ -4,21 +4,15 @@ import { useMediaQuery } from '@mantine/hooks';
 import { FadeUpAni } from '../animation/fade-up';
 
 export const LandingHero = () => {
-  const BigMd = useMediaQuery(`(min-width: ${BREAKPOINTS.MD})`);
+  const BigSM = useMediaQuery(`(min-width: ${BREAKPOINTS.SM})`);
 
   return (
     <>
-      <Center
-        h="100vh"
-        style={{
-          position: 'relative',
-          overflow: 'hidden',
-        }}
-      >
+      <Center h="100vh">
         <Stack align="center">
           <FadeUpAni>
             <Title
-              size={rem(BigMd ? 250 : 130)}
+              size={rem(BigSM ? 250 : 130)}
               lh={0.8}
               c={PRIMARY_COLOR_MANTINE}
             >
@@ -31,7 +25,7 @@ export const LandingHero = () => {
           </FadeUpAni>
           <FadeUpAni delay={3}>
             <Title
-              size={rem(BigMd ? 250 : 130)}
+              size={rem(BigSM ? 250 : 130)}
               lh={0.8}
               c={PRIMARY_COLOR_MANTINE}
             >
@@ -40,7 +34,7 @@ export const LandingHero = () => {
           </FadeUpAni>
 
           <FadeUpAni delay={4}>
-            <Text size={rem(BigMd ? 30 : 20)} ta="center">
+            <Text size={rem(BigSM ? 30 : 18)} ta="center">
               Full Stack Developer Who Loves To Build Stuff.
             </Text>
           </FadeUpAni>
