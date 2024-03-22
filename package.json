@@ -1,5 +1,5 @@
 {
-  "name": "xtools",
+  "name": "mohitxskull",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -21,11 +21,8 @@
     "@tabler/icons-react": "^3.1.0",
     "dayjs": "^1.11.10",
     "framer-motion": "^11.0.14",
-    "generate-passphrase": "^1.3.0",
-    "generate-password": "^1.7.1",
     "jotai": "^2.7.1",
     "next": "14.1.3",
-    "random-words": "^2.0.1",
     "react": "^18",
     "react-dom": "^18",
     "scroller-motion": "^1.2.3",
