@@ -1,7 +1,7 @@
 import { type ReactNode } from 'react';
 import { motion } from 'framer-motion';
 
-export function FadeUpAni({
+export function GrowRightAni({
   children,
   delay,
 }: {
@@ -11,13 +11,13 @@ export function FadeUpAni({
   return (
     <>
       <motion.div
-        initial={{ opacity: 0, y: 50 + (delay || 0) * 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ width: 0 }}
+        whileInView={{ width: '100%' }}
         viewport={{ once: true }}
         transition={{
           ease: 'easeOut',
-          duration: 1.5,
-          y: { duration: 0.5 },
+          duration: 1,
+          delay: delay || 0,
         }}
       >
         {children}

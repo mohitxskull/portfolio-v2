@@ -1,5 +1,5 @@
-import { BREAKPOINTS } from '@/lib/const';
-import { Center, Image, Stack, Title, rem } from '@mantine/core';
+import { BREAKPOINTS, PRIMARY_COLOR_MANTINE } from '@/lib/const';
+import { Center, Stack, Text, Title, rem } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { FadeUpAni } from '../animation/fade-up';
 
@@ -15,29 +15,34 @@ export const LandingHero = () => {
           overflow: 'hidden',
         }}
       >
-        <Image
-          style={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            zIndex: 5,
-            transform: 'translate(-50%, -50%)',
-            mixBlendMode: 'difference',
-          }}
-          src="/skull.jpg"
-          w={400}
-        />
         <Stack align="center">
           <FadeUpAni>
-            <Title size={rem(BigMd ? 500 : 250)} lh={0.8}>
+            <Title
+              size={rem(BigMd ? 250 : 130)}
+              lh={0.8}
+              c={PRIMARY_COLOR_MANTINE}
+            >
+              Mohit
+            </Title>
+          </FadeUpAni>
+
+          <FadeUpAni delay={2}>
+            <Title>X</Title>
+          </FadeUpAni>
+          <FadeUpAni delay={3}>
+            <Title
+              size={rem(BigMd ? 250 : 130)}
+              lh={0.8}
+              c={PRIMARY_COLOR_MANTINE}
+            >
               Skull
             </Title>
           </FadeUpAni>
 
-          <FadeUpAni delay={1}>
-            <Title size={rem(30)} ta="center">
+          <FadeUpAni delay={4}>
+            <Text size={rem(BigMd ? 30 : 20)} ta="center">
               Full Stack Developer Who Loves To Build Stuff.
-            </Title>
+            </Text>
           </FadeUpAni>
         </Stack>
       </Center>

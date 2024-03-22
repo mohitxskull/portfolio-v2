@@ -16,6 +16,7 @@ import { Children } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { FadeUpAni } from '../animation/fade-up';
+import { GrowRightAni } from '../animation/grow-right';
 
 const Work = [
   {
@@ -64,7 +65,7 @@ const WorkCard = (props: {
   category: string;
   index: number;
 }) => (
-  <FadeUpAni delay={props.index / 2}>
+  <FadeUpAni delay={props.index + 1}>
     <Paper
       bg="transparent"
       p="md"
@@ -101,7 +102,7 @@ const WorkCard = (props: {
 
         <Title size={rem(50)}>{props.title}</Title>
 
-        <Text size="md">{props.description}</Text>
+        <Text size="lg">{props.description}</Text>
       </Stack>
     </Paper>
   </FadeUpAni>
@@ -111,14 +112,15 @@ export const LandingWork = () => (
   <>
     <Center h="100vh">
       <Stack>
-        <Title size={rem(150)} lh={1}>
+        <Title size={rem(150)} lh={0} c={PRIMARY_COLOR_MANTINE}>
           Work
         </Title>
-        <Divider color="white" />
-        <Divider color={PRIMARY_COLOR_MANTINE} />
-        <Divider color="white" />
-        <Divider color={PRIMARY_COLOR_MANTINE} />
-        <Divider color="white" />
+        <GrowRightAni>
+          <Divider size="xl" color="black" />
+        </GrowRightAni>
+        <GrowRightAni delay={0.2}>
+          <Divider size="xl" color="black" />
+        </GrowRightAni>
       </Stack>
     </Center>
     <SimpleGrid mih="100vh" cols={{ base: 1, md: 2 }}>

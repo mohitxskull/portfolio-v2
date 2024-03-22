@@ -1,43 +1,39 @@
 import '@/styles/globals.css';
 import '@mantine/core/styles.css';
+import '@mantine/notifications/styles.css';
 
 import type { AppProps } from 'next/app';
 import { createTheme, MantineProvider } from '@mantine/core';
-import { DARK, PRIMARY_COLOR, PRIMARY_SHADE } from '@/lib/const';
+import { FONT_FAMILY, PRIMARY_COLOR, PRIMARY_SHADE } from '@/lib/const';
 import Head from 'next/head';
 import { MetaTagsComp } from '@/components/indie/meta-tags';
-import { Archivo } from 'next/font/google';
-
-const archivo = Archivo({ subsets: ['latin'], weight: '400' });
+import { Notifications } from '@mantine/notifications';
 
 const theme = createTheme({
   primaryColor: PRIMARY_COLOR,
   primaryShade: PRIMARY_SHADE,
 
-  fontFamily: archivo.style.fontFamily,
+  fontFamily: FONT_FAMILY.LARKEN,
 
-  fontFamilyMonospace: 'Geakosa',
+  fontFamilyMonospace: FONT_FAMILY.CONDOR,
   headings: {
-    fontFamily: 'Geakosa',
-    fontWeight: 'normal',
+    fontFamily: FONT_FAMILY.LARKEN_B,
   },
-
-  black: DARK,
 
   defaultRadius: 0,
 
   colors: {
-    grape: [
-      '#f4ecff',
-      '#e3d4fa',
-      '#c4a6f3',
-      '#a475ed',
-      '#884be7',
-      '#7631e4',
-      '#6e23e4',
-      '#5d18cb',
-      '#5214b6',
-      '#460da0',
+    orange: [
+      '#fff0e5',
+      '#fde0d2',
+      '#f4bfa7',
+      '#ec9c78',
+      '#e57e50',
+      '#e16b36',
+      '#e06228',
+      '#c8511b',
+      '#b24715',
+      '#9c3b0d',
     ],
   },
 });
@@ -64,8 +60,10 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
 
-      <MantineProvider theme={theme} defaultColorScheme="dark">
-        <div className="noise" />
+      <MantineProvider theme={theme} defaultColorScheme="light">
+        {/* <div className="noise" /> */}
+
+        <Notifications />
 
         <Component {...pageProps} />
 

@@ -2,9 +2,10 @@ import { LandingAbout } from '@/components/landing-page/about';
 import { LandingContact } from '@/components/landing-page/contact';
 import { LandingHero } from '@/components/landing-page/hero';
 import { LandingInterest } from '@/components/landing-page/interest';
+import { LandingSkills } from '@/components/landing-page/skills';
 import { LandingWork } from '@/components/landing-page/work';
+import { BACKGROUND } from '@/lib/const';
 
-import { DARK } from '@/lib/const';
 import { Container, Stack } from '@mantine/core';
 import { ScrollerMotion } from 'scroller-motion';
 
@@ -13,13 +14,9 @@ export default function Home() {
     <>
       <ScrollerMotion
         style={{
-          backgroundColor: DARK,
+          backgroundColor: BACKGROUND,
         }}
-        // make it slow
-        spring={{
-          stiffness: 70,
-          damping: 20,
-        }}
+        scale={4}
       >
         <Container size="1800px">
           <Stack>
@@ -28,6 +25,7 @@ export default function Home() {
             {/* <LandingPiano /> */}
             <LandingAbout />
             <LandingWork />
+            <LandingSkills />
             <LandingInterest />
             <LandingContact />
           </Stack>

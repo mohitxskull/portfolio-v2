@@ -1,16 +1,13 @@
-import { BREAKPOINTS, PRIMARY_COLOR_MANTINE, PRIMARY_SHADE } from '@/lib/const';
+import { FONT_FAMILY } from '@/lib/const';
 import {
-  Box,
+  Center,
   MantineColor,
   MantineStyleProp,
-  Space,
+  SimpleGrid,
   Text,
-  Title,
   rem,
 } from '@mantine/core';
-import { useMediaQuery } from '@mantine/hooks';
 import Link from 'next/link';
-import { FadeUpAni } from '../animation/fade-up';
 
 const HighText = (props: {
   children: React.ReactNode;
@@ -19,7 +16,13 @@ const HighText = (props: {
   href?: string;
 }) => {
   const mainComp = (
-    <Text inherit span c={props.c} style={props.style}>
+    <Text
+      inherit
+      span
+      c={props.c}
+      style={props.style}
+      ff={FONT_FAMILY.LARKEN_B}
+    >
       {props.children}
     </Text>
   );
@@ -31,31 +34,20 @@ const HighText = (props: {
   return mainComp;
 };
 
-export const LandingAbout = () => {
-  const BigMd = useMediaQuery(`(min-width: ${BREAKPOINTS.MD})`);
+export const LandingAbout = () => (
+  <>
+    <Center mih="100vh">
+      <SimpleGrid maw={1000}>
+        <Text size="xl">Little about me</Text>
 
-  return (
-    <>
-      <Box>
-        <FadeUpAni>
-          <Title size={rem(BigMd ? 95 : 55)} lh={1.2}>
-            Hi, I&apos;m{' '}
-            <HighText c={PRIMARY_COLOR_MANTINE}>Mohit Meena</HighText> aka{' '}
-            <HighText c={PRIMARY_COLOR_MANTINE}>Skull</HighText> 🗿
-          </Title>
-        </FadeUpAni>
-
-        <Space h="120" />
-
-        <FadeUpAni delay={1}>
-          <Title size={rem(BigMd ? 95 : 55)} lh={1.2}>
-            I am a full-stack developer with{' '}
-            <HighText c={`red.${PRIMARY_SHADE}`}>3+ years</HighText> of
-            experience building innovative and user-friendly 💎 web
-            applications.
-          </Title>
-        </FadeUpAni>
-      </Box>
-    </>
-  );
-};
+        <Text ff={FONT_FAMILY.CONDOR} fw="bold" size={rem(35)} lh={1.1}>
+          As a <HighText>Full Stack Developer</HighText>, I have worked on a
+          variety of projects, scaling from small to large. I have a keen
+          interest in <HighText>Web Development</HighText> and{' '}
+          <HighText>Startups</HighText>. I am always looking for new
+          opportunities to learn and grow.
+        </Text>
+      </SimpleGrid>
+    </Center>
+  </>
+);

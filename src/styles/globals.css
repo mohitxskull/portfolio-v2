@@ -15,7 +15,7 @@
 html,
 body {
   user-select: none;
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
   overscroll-behavior: none;
 
   @media (max-width: 36em) {
@@ -37,20 +37,29 @@ body {
 }
 
 @font-face {
-  font-family: 'Geakosa';
-  src: url('/Geakosa-Regular.woff2') format('woff2'),
-    url('/Geakosa-Regular.woff') format('woff');
-  font-weight: normal;
+  font-family: 'Condor';
+  src: url('/Condor-Light.woff2') format('woff2'),
+    url('/Condor-Light.woff') format('woff');
+  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'GeakosaOutline';
-  src: url('/Geakosa-ObliqueOutline.woff2') format('woff2'),
-    url('/Geakosa-ObliqueOutline.woff') format('woff');
-  font-weight: normal;
+  font-family: 'Larken-B';
+  src: url('/LarkenDEMO-BoldItalic.woff2') format('woff2'),
+    url('/LarkenDEMO-BoldItalic.woff') format('woff');
+  font-weight: bold;
   font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Larken';
+  src: url('/LarkenDEMO-Regular.woff2') format('woff2'),
+    url('/LarkenDEMO-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
   font-display: swap;
 }
 
@@ -102,6 +111,14 @@ body {
   &:hover {
     background-color: #fff;
     color: #04040f;
+  }
+}
+
+/* increase space between letters smoothly */
+.letter-spacing {
+  transition: 0.5s;
+  &:hover {
+    letter-spacing: 0.03em;
   }
 }
 

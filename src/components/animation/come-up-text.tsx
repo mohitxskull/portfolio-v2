@@ -1,23 +1,29 @@
 import { motion } from 'framer-motion';
-import { Title, TitleProps } from '@mantine/core';
 
-export function ComeUpTextAni(props: { text: string; props: TitleProps }) {
+export function ComeUpTextAni(props: { children: React.ReactNode }) {
   return (
     <>
-      <motion.div
-        initial={{ opacity: 0, x: -50 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{
-          ease: 'linear',
-          duration: 1,
-          x: { duration: 0.5 },
+      <div
+        style={{
+          border: '1px solid red',
+          display: 'block',
+          textAlign: 'center',
+          position: 'relative',
         }}
       >
-        <motion.div>
-          <Title {...props}>{props.text}</Title>
+        <motion.div
+          style={{
+            position: 'relative',
+            display: 'inline-block',
+          }}
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          {props.children}
         </motion.div>
-      </motion.div>
+      </div>
     </>
   );
 }
