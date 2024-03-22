@@ -1,4 +1,4 @@
-import { Center, Divider, Stack, Text, Title, rem } from '@mantine/core';
+import { Center, Divider, Stack, Title, rem } from '@mantine/core';
 
 import { Children } from 'react';
 import { useMediaQuery } from '@mantine/hooks';
@@ -13,13 +13,9 @@ export const LandingInterest = () => {
   return (
     <>
       <Center mih="100vh">
-        <Stack>
-          <Title size={rem(BigSm ? 200 : 100)} lh={1} c={PRIMARY_COLOR_MANTINE}>
-            Interest
-          </Title>
-
-          <Text size="xl">Scroll down human being</Text>
-        </Stack>
+        <Title size={rem(BigSm ? 200 : 100)} lh={1} c={PRIMARY_COLOR_MANTINE}>
+          Interest
+        </Title>
       </Center>
       <Stack gap={0}>
         {Children.toArray(
