@@ -1,8 +1,8 @@
-import { RED } from "@/lib/const";
-import { Text, type TextProps } from "@mantine/core";
-import { useClipboard } from "@mantine/hooks";
-import { notifications } from "@mantine/notifications";
-import { type ReactNode } from "react";
+import { PRIMARY_COLOR_MANTINE } from '@/lib/const';
+import { Text, type TextProps } from '@mantine/core';
+import { useClipboard } from '@mantine/hooks';
+import { notifications } from '@mantine/notifications';
+import { type ReactNode } from 'react';
 
 interface TextWithClipboardProps {
   children: ReactNode;
@@ -17,7 +17,7 @@ export const TextWithClipboard = (props: TextWithClipboardProps) => {
   return (
     <>
       <Text
-        style={{ cursor: clipboard.copied ? "not-allowed" : "pointer" }}
+        style={{ cursor: clipboard.copied ? 'not-allowed' : 'pointer' }}
         onClick={() => {
           if (clipboard.copied) {
             return;
@@ -26,9 +26,9 @@ export const TextWithClipboard = (props: TextWithClipboardProps) => {
           clipboard.copy(props.data);
 
           notifications.show({
-            title: "Copied",
+            title: 'Copied',
             message: `Copied ${props.dataName} to clipboard`,
-            color: RED,
+            color: PRIMARY_COLOR_MANTINE,
           });
         }}
         {...props.props}

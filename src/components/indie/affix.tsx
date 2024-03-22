@@ -1,7 +1,7 @@
-import { RED } from "@/lib/const";
-import { ActionIcon, Affix, Transition, rem } from "@mantine/core";
-import { useWindowScroll } from "@mantine/hooks";
-import { IconArrowUp } from "@tabler/icons-react";
+import { PRIMARY_COLOR_MANTINE } from '@/lib/const';
+import { ActionIcon, Affix, Transition, rem } from '@mantine/core';
+import { useWindowScroll } from '@mantine/hooks';
+import { IconArrowUp } from '@tabler/icons-react';
 
 export const AffixComp = () => {
   const [scroll, scrollTo] = useWindowScroll();
@@ -13,7 +13,7 @@ export const AffixComp = () => {
           {(transitionStyles) => (
             <ActionIcon
               variant="filled"
-              color={RED}
+              color={PRIMARY_COLOR_MANTINE}
               style={transitionStyles}
               onClick={() => scrollTo({ y: 0 })}
               size="xl"
