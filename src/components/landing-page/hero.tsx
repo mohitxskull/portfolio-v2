@@ -21,10 +21,10 @@ export const LandingHero = () => {
               </Title>
             </FadeUpAni>
 
-            <FadeUpAni delay={2}>
+            <FadeUpAni>
               <Title>X</Title>
             </FadeUpAni>
-            <FadeUpAni delay={3}>
+            <FadeUpAni>
               <Title
                 size={rem(BigSM ? 250 : 130)}
                 lh={0.8}
@@ -34,7 +34,7 @@ export const LandingHero = () => {
               </Title>
             </FadeUpAni>
 
-            <FadeUpAni delay={4}>
+            <FadeUpAni>
               <Text size={rem(BigSM ? 30 : 18)} ta="center">
                 Full Stack Developer Who Loves To Build Stuff.
               </Text>
@@ -42,9 +42,11 @@ export const LandingHero = () => {
           </Stack>
         </Center>
 
-        <Text size="md" ta="center">
-          Scroll down human being
-        </Text>
+        <FadeUpAni>
+          <Text size="md" ta="center">
+            Scroll down human being
+          </Text>
+        </FadeUpAni>
       </Stack>
     </>
   );
