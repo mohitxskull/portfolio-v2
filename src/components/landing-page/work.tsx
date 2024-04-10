@@ -21,6 +21,19 @@ import { GrowRightAni } from '../animation/grow-right';
 
 const Work = [
   {
+    title: 'Minimal Docs',
+    description:
+      'A developer-friendly boilerplate built for creating clean, informative, and user-friendly documentation.',
+    link: 'https://github.com/XScale-Agency/Minimal-Docs',
+    category: 'Web Development',
+  },
+  {
+    title: 'PHC Formatter',
+    description: 'PHC Formatter serializes and deserializes PHC strings.',
+    link: 'https://github.com/XScale-Agency/PHC-Formatter',
+    category: 'Utilities',
+  },
+  {
     title: 'Hidden Mail',
     description: 'A minimalistic 1SecMail client.',
     link: 'https://hm.mohitxskull.dev',
@@ -38,18 +51,18 @@ const Work = [
     link: 'https://xscale.agency',
     category: 'Web Development',
   },
-  {
-    title: 'Country API',
-    description: 'A simple country API.',
-    link: 'https://country-api-self.vercel.app/',
-    category: 'Full Stack Development',
-  },
-  {
-    title: 'Eternal Heroes Foundation',
-    description: 'EHF NGO website.',
-    link: 'https://ehfoundation.in/',
-    category: 'Full Stack Development',
-  },
+  // {
+  //   title: 'Country API',
+  //   description: 'A simple country API.',
+  //   link: 'https://country-api-self.vercel.app/',
+  //   category: 'Full Stack Development',
+  // },
+  // {
+  //   title: 'Eternal Heroes Foundation',
+  //   description: 'EHF NGO website.',
+  //   link: 'https://ehfoundation.in/',
+  //   category: 'Full Stack Development',
+  // },
   {
     title: 'WEB3 Images',
     description:

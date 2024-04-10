@@ -8,13 +8,14 @@ import { FadeUpAni } from '../animation/fade-up';
 const TechStack = [
   'TypeScript',
   'Next.js',
-  'React',
   'Mantine',
   'Google Cloud',
   'TRPC',
-  'Prisma',
   'Drizzle',
   'Planetscale',
+  'Redis',
+  'Kafka',
+  'Microservices',
 ];
 
 export const LandingSkills = () => {

@@ -24,11 +24,11 @@ export const LandingContact = () => (
           </TextWithClipboard>
         </FadeUpAni>
 
-        <FadeUpAni delay={1}>
+        <FadeUpAni>
           <Divider w="100%" color={PRIMARY_COLOR_MANTINE} />
         </FadeUpAni>
 
-        <FadeUpAni delay={2}>
+        <FadeUpAni>
           <Group justify="space-between">
             <Text size="lg" fw="bold" ff={FONT_FAMILY.CONDOR}>
               Built By Skull
